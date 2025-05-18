@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Şehrim - Benim Web Sitem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Benim Sitem </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Şehir Bilgileri -->
+  <main class="container my-5">
+    <header class="mb-4 text-center">
+      <h1>KOCAELİ</h1>
+      <p class="lead">[Buraya şehrin genel tanıtımı gelecek]</p>
+    </header>
+
+    <section>
+      <h2>Nüfus</h2>
+      <p>[Buraya şehrin nüfusu hakkında bilgi yazılacak]</p>
+    </section>
+  </main>
+
+  <!-- Slider Alanı -->
+  <div class="container mb-5">
+    <h2 class="text-center">Şehirden Görseller 📸</h2>
+    <div id="sehirSlider" class="carousel slide" data-bs-ride="carousel"> <!--atlı karınca sliderını kullanmak istedim-->
+      <div class="carousel-inner">
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <img src="kocaeli.jpg" class="d-block w-100" alt="İzmit" height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="#icerik1" class="text-white text-decoration-none">İzmit</a></h5>
+          </div>
+        </div>
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <img src="saatkulesi.jpg" class="d-block w-100" alt="İzmit Saat Kulesi"height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="#icerik2" class="text-white text-decoration-none">İzmit Saat Kulesi</a></h5>
+          </div>        
+        </div>
+        <!-- SLIDE 3 -->
+        <div class="carousel-item">
+          <img src="tepe.jpg" class="d-block w-100" alt="Seka Park Uçurtma Tepesi" height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="#icerik3" class="text-white text-decoration-none">Seka Park Uçurtma Tepesi</a></h5>
+          </div>
+        </div>
+        <!-- SLIDE 4 -->
+        <div class="carousel-item">
+          <img src="cami.jpg" class="d-block w-100" alt="yeni Cuma Camii" height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="#icerik4" class="text-white text-decoration-none">Yeni Cuma Camii</a></h5>      
+          </div>
+        </div>
+          <!-- SLIDE 5 -->
+            <div class="carousel-item">
+          <img src="muze.jpg" class="d-block w-100" alt="Seka Kağıt Müzesi" height="500px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="#icerik5" class="text-white text-decoration-none">Seka Kağıt Müzesi</a></h5>
+            </div>
+      
+        </div>
+      </div>
+
+      <!-- Kontroller -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slider Bağlantılı İçerikler -->
+  <div class="container mb-5">
+    <section id="icerik1">
+      <h3>İzmit</h3>
+      <p style="font-size :160%;">İzmit 380 831'lik nüfüsu ile Kocaeli'nin en kalabalık 2. ilçesidir.Aynı zamanda İzmit dendiğinde çoğu insanın aklına direkt olarak Kocaeli şehri gelmektedir.İzmit'te Kocaelinin diğer birçok yerinde olduğu gibi bolca pişmaniyeci bulunmaktadır. </p>
+    </section>
+    <br><br>
+
+    <section id="icerik2">
+      <h3>İzmit Saat Kulesi</h3>
+      <p style="font-size :160%;">İzmit Saat kulesi Kocaeli'nin sembollerinden biridir.Sultan II.Abdülhamit'in tahta çıkışının 25.yıl dönümü için 1 Eylül 1901 de inşa edilmeye başlanmıştır.Eylül 1902'de inşası tamamlanan kule Kocaeli'de yerli ve yabancı turistler için bir ilgi noktası olmuştur.Kocaeli ilinin merkezi İzmit'in Kemalpaşa Mahallesi'nde, İzmit Garı'nın kuzeydoğusundaki tepenin üzerinde bulunan bu kule aynı zamanda ildeki tek saat kulesidir.</p>
+    </section>
+     <br><br>
+
+    <section id="icerik3">
+      <h3>Seka Park Uçurtma Tepesi</h3>
+      <p style="font-size :160%;" >Seka Park'ın batısında kalan ve çeşitli etkinliklerde kullanılan Uçurtma Tepesi, manzarası ve uzaktan görünümü ile Kocaeli'nin sevilen noktalarından bir tanesi olmuştur.Günün neredeyse her saatinde renkli uçurtmaların havada süzüldüğünü gördüğünüz bu tepenin etrafı renkli çiçeklerle süslenmiştir.</p>
+    </section>
+     <br><br>
+    <section id="icerik4">
+      <h3>Yeni Cuma Camii</h3>
+      <p>[Bu kısımda resim 4'e ait bilgi yer alacak]</p>
+    </section>
+    <br><br>
+    <section id="icerik5">
+      <h3>5. Resme Ait Bilgi</h3>
+      <p>[Bu kısımda resim 4'e ait bilgi yer alacak]</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    © 2025 | Tüm Hakları Saklıdır | Hazırlayan: Ahmet Efe Topçu
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
