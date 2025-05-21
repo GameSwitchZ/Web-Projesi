@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İlgi Alanlarım - Benim Web Sitem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Benim Sitem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- İçerik -->
+<div class="container my-5">
+  <h1 class="text-center">İlgi Alanlarım</h1>
+
+  <!-- 🎬 Film Bilgisi -->
+  <section class="my-5">
+    <h2>🎥 En Sevdiğim Film: Return of the Jedi</h2>
+    <button id="filmBtn" class="btn btn-primary mb-3">Film Bilgilerini Getir</button>
+    <div id="filmInfo" class="border rounded p-3 bg-light"></div>
+  </section>
+
+  <!-- 🎧 Müzik -->
+  <section class="my-5">
+    <h2>🎶 Barış Manço – Nane Limon Kabuğu</h2>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/aZ2MCLwD8_4" title="Barış Manço - Nane Limon Kabuğu" allowfullscreen></iframe>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  © 2025 | Tüm Hakları Saklıdır | Hazırlayan: Ahmet Efe Topçu
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("filmBtn").addEventListener("click", function () {
+    fetch("https://www.omdbapi.com/?i=tt0086190&apikey=8f26d5e8")
+      .then(response => response.json())
+      .then(data => {
+        const html = `
+          <h5>${data.Title} (${data.Year})</h5>
+          <p><strong>Yönetmen:</strong> ${data.Director}</p>
+          <p><strong>IMDb:</strong> ${data.imdbRating}</p>
+          <p><strong>Konu:</strong> ${data.Plot}</p>
+          <img src="${data.Poster}" class="img-fluid mt-2" style="max-height:300px;">
+        `;
+        document.getElementById("filmInfo").innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById("filmInfo").innerHTML = "Bilgi alınamadı. 😢";
+      });
+  });
+</script>
+</body>
+</html>
