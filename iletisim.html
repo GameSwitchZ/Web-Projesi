@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim - Benim Web Sitem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Benim Sitem </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">İletişim</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- İletişim Formu -->
+<div class="container my-5">
+  <h1 class="text-center">İletişim Formu</h1>
+  <form name="iletisimForm" action="goster.html" method="get" onsubmit="return kontrolEt();">
+    <div class="mb-3">
+      <label for="ad" class="form-label">Ad</label>
+      <input type="text" class="form-control" id="ad" name="ad">
+    </div>
+    <div class="mb-3">
+      <label for="soyad" class="form-label">Soyad</label>
+      <input type="text" class="form-control" id="soyad" name="soyad">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="Telefon" class="form-label">Telefon</label>
+      <input type="number" class="form-control" id="Telefon" name="Telefon">
+    </div>
+    <div class="mb-3">
+      <label for="mesaj" class="form-label">Mesaj</label>
+      <textarea class="form-control" id="mesaj" name="mesaj" rows="3"></textarea>
+    </div>
+    <div class="mb-3 text-center">
+      <button type="submit" class="btn btn-primary">Gönder</button>
+      <button type="button" class="btn btn-secondary" onclick="temizle();">Temizle</button>
+    </div>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  © 2025 | Tüm Hakları Saklıdır | Hazırlayan: Ahmet Efe Topçu
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Form Kontrol JS -->
+<script>
+  function kontrolEt() {
+    var ad = document.getElementById("ad").value.trim();
+    var soyad = document.getElementById("soyad").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var mesaj = document.getElementById("Telefon").value.trim();
+    var mesaj = document.getElementById("mesaj").value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Geçerli bir email formatı kontrolü için
+    var TelefonRegex = /^\d{10}+$/; // Geçerli bir telefon formatı kontrolü için
+
+    if (ad === "" || soyad === "" || email === "" || Telefon === "" ||mesaj === "") {
+      alert("Lütfen tüm alanları doldurun.");
+      return false;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("Geçerli bir email adresi giriniz.");
+      return false;
+    }
+    if (!TelefonRegex.test(Telefon)) {
+      alert("Geçerli bir telefon numarası giriniz.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function temizle() {
+    document.getElementById("ad").value = "";
+    document.getElementById("soyad").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("mesaj").value = "";
+  }
+</script>
+
+</body>
+</html>

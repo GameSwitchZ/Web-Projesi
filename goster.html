@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gönderilen Bilgiler - Benim Web Sitem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Benim Sitem </a>
+  </div>
+</nav>
+
+<!-- Bilgiler -->
+<div class="container my-5">
+  <h1 class="text-center">Gönderilen Bilgiler</h1>
+  <div class="card p-4 bg-light">
+    <p><strong>Ad:</strong> <span id="gAd"></span></p>
+    <p><strong>Soyad:</strong> <span id="gSoyad"></span></p>
+    <p><strong>Email:</strong> <span id="gEmail"></span></p>
+    <p><strong>Mesaj:</strong> <span id="gMesaj"></span></p>
+    <p><strong>Telefon:</strong> <span id="gTelefon"></span></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  © 2025 | Tüm Hakları Saklıdır | Hazırlayan: Ahmet Efe Topçu
+</footer>
+
+<script>
+  // URL'den parametreleri çekme
+  const params = new URLSearchParams(window.location.search);
+
+  document.getElementById("gAd").innerText = params.get("ad") || "(boş)";
+  document.getElementById("gSoyad").innerText = params.get("soyad") || "(boş)";
+  document.getElementById("gEmail").innerText = params.get("email") || "(boş)";
+  document.getElementById("gTelefon").innerText = params.get("Telefon") || "(boş)";
+  document.getElementById("gMesaj").innerText = params.get("mesaj") || "(boş)";
+</script>
+
+</body>
+</html>
