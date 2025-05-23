@@ -78,9 +78,9 @@
     var mesaj = document.getElementById("Telefon").value.trim();
     var mesaj = document.getElementById("mesaj").value.trim();
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Geçerli bir email formatı kontrolü için
-    var TelefonRegex = /^\d{10}+$/; // Geçerli bir telefon formatı kontrolü için
+    // Geçerli bir telefon formatı kontrolü için
 
-    if (ad === "" || soyad === "" || email === "" || Telefon === "" ||mesaj === "") {
+    if (ad === "" || soyad === "" || email === "" || Telefon === "" || mesaj === "") {
       alert("Lütfen tüm alanları doldurun.");
       return false;
     }
@@ -102,6 +102,7 @@
     document.getElementById("soyad").value = "";
     document.getElementById("email").value = "";
     document.getElementById("mesaj").value = "";
+    document.getElementById("Telefon").value = "";
   }
 </script>
 
